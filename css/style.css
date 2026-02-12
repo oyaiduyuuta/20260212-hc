@@ -1,0 +1,272 @@
+@charset "UTF-8";
+
+/* ====================
+  基本設定
+==================== */
+
+/* すべての要素に適用 */
+* {
+  box-sizing: border-box; /* padding・borderを含めてサイズ計算する */
+  margin: 0; /* 外側余白をリセット */
+  padding: 0; /* 内側余白をリセット */
+}
+
+/* ページ全体の基本設定 */
+body {
+  margin: 0; /* bodyのデフォルト余白を削除 */
+  color: #000; /* 文字色を黒に設定 */
+  background: #fff; /* 背景色を白に設定 */
+}
+
+/* ====================
+  ヘッダー
+==================== */
+
+header {
+  height: 500px; /* 高さを固定 */
+  background: #cfcfcf; /* 背景をグレーに */
+  display: flex; /* Flexboxレイアウトにする */
+  align-items: center; /* 縦方向中央揃え */
+  justify-content: center; /* 横方向中央揃え */
+  background: url("../img/header(1).png") center -200px / cover no-repeat;
+}
+
+/* メイン見出し */
+h1 {
+  font-size: 64px; /* 大きな文字サイズ */
+  color: #fff; /* 白文字 */
+  margin: 0; /* 余白をリセット */
+}
+
+/* ====================
+  メイン
+==================== */
+
+/* 各セクション共通 */
+section {
+  display: flex; /* Flexboxで配置 */
+  flex-wrap: wrap; /* 折り返しを許可 */
+  gap: 48px; /* 要素間の余白 */
+  padding: 100px 0; /* 上下に広めの余白 */
+}
+
+/* セクション見出し */
+h2 {
+  font-size: 30px; /* 見出しサイズ */
+  margin: 0; /* 余白リセット */
+  width: 100%; /* 横幅いっぱい使用 */
+  text-align: center; /* 中央揃え */
+}
+
+/* ====================
+  プロフィール
+==================== */
+
+/* プロフィール全体 */
+#profile {
+  width: 724px; /* 横幅固定 */
+  margin: auto; /* 中央配置 */
+  display: flex; /* 横並び */
+  align-items: center; /* 縦中央揃え */
+  gap: 48px; /* 要素間の余白 */
+}
+
+/* プロフィール画像 */
+#profile img {
+  width: 200px; /* 画像サイズ */
+  background: #cfcfcf; /* 画像未設定時の背景 */
+  border-radius: 50%; /* 円形にする */
+}
+
+/* テキストエリア */
+.profile-text {
+  width: 476px; /* 横幅固定 */
+  display: flex; /* 縦並びレイアウト */
+  flex-direction: column; /* 縦方向配置 */
+  gap: 20px; /* 各テキストの間隔 */
+}
+
+/* 名前 */
+.profile-name {
+  font-size: 20px; /* 少し大きめ */
+  font-weight: 700; /* 太字 */
+  margin: 0; /* 余白リセット */
+}
+
+/* 自己紹介文 */
+.profile-description {
+  font-size: 16px; /* 本文サイズ */
+  margin: 0; /* 余白リセット */
+  line-height: 1.6; /* 行間を広げて読みやすく */
+}
+
+/* ====================
+  スキル
+==================== */
+
+/* スキルセクション */
+#skill {
+  background: #fafafa; /* 薄いグレー背景 */
+  padding: 80px 0; /* 上下余白 */
+}
+
+/* スキルカード全体 */
+.skill-items {
+  display: flex; /* 横並び */
+  justify-content: center; /* 中央寄せ */
+  gap: 80px; /* カード間隔 */
+  width: 910px; /* 横幅固定 */
+  margin: auto; /* 中央配置 */
+}
+
+/* 各スキル */
+.skill-item {
+  width: 250px; /* カード幅 */
+  display: flex; /* 縦並び */
+  flex-direction: column; /* 縦方向配置 */
+  align-items: center; /* 中央揃え */
+  gap: 16px; /* 要素間隔 */
+}
+
+/* スキル画像 */
+.skill-image {
+  width: 200px; /* 横幅 */
+  height: 200px; /* 高さ */
+  background: #cfcfcf; /* ダミー背景 */
+}
+
+/* スキル名 */
+.skill-name {
+  font-size: 20px; /* 見出しサイズ */
+  font-weight: 700; /* 太字 */
+  margin: 0; /* 余白リセット */
+}
+
+/* 星 */
+.skill-rate {
+  font-size: 20px; /* サイズ */
+  margin: 0; /* 余白リセット */
+  /* 星の色を変える */
+  /* color: #ffc15d; */
+}
+/* 黒星の色だけ変える
+.skill-rate span {
+  color: #f39c12;
+}
+*/
+
+/* スキル説明文 */
+.skill-desc {
+  font-size: 16px; /* 本文サイズ */
+  margin: 0; /* 余白リセット */
+  line-height: 1.4; /* 行間調整 */
+}
+
+/* ====================
+  作品
+==================== */
+
+/* 作品一覧 */
+.work-items {
+  width: 1100px; /* 全体幅 */
+  margin: auto; /* 中央配置 */
+  display: flex; /* Flex配置 */
+  flex-wrap: wrap; /* 折り返し */
+  gap: 80px 100px; /* 行・列の間隔 */
+}
+
+/* 各作品 */
+.work-item {
+  width: 300px; /* カード幅 */
+  display: flex; /* 縦並び */
+  flex-direction: column; /* 縦方向 */
+  align-items: center; /* 中央揃え */
+  gap: 20px; /* 要素間隔 */
+}
+
+/* サムネイル画像 */
+.work-thumb {
+  width: 300px; /* 横幅 */
+  height: 200px; /* 高さ */
+  object-fit: cover; /* はみ出しをトリミング */
+}
+
+/* 作品タイトル */
+#works h3 {
+  width: 100%; /* 横幅いっぱい */
+  font-size: 16px; /* サイズ */
+  font-weight: 700; /* 太字 */
+  margin: 0; /* 余白リセット */
+}
+
+/* ----- リンクボタン ----- */
+
+/* リンクボタン群 */
+.work-links {
+  width: 100%; /* 横幅 */
+  display: flex; /* 横並び */
+  flex-wrap: wrap; /* 折り返し */
+  gap: 2px; /* ボタン間の隙間 */
+}
+
+/* 各リンクボタン */
+.work-links a {
+  width: 148px; /* ボタン幅 */
+  padding: 8px 30px; /* 内側余白 */
+  background: #000; /* 背景黒 */
+  color: #fff; /* 文字白 */
+  text-decoration: none; /* 下線削除 */
+  display: inline-flex; /* アイコンと文字を横並び */
+  align-items: center; /* 縦中央 */
+  font-size: 14px; /* 文字サイズ */
+  transition: .3s; /* ホバー時のアニメーション */
+}
+/* Figmaのリンクの背景色 */
+.work-links a:nth-of-type(1):hover {
+  background: #A259FF; /* Figmaカラー */
+}
+/* GitHubのリンクの背景色 */
+.work-links a:nth-of-type(2):hover {
+  background: #666; /* GitHub風グレー */
+}
+/* Sampleのリンクの背景色 */
+.work-links a:nth-of-type(3):hover {
+  background: #2F88FF; /* 青 */
+}
+/* Customのリンクの背景色 */
+.work-links a:nth-of-type(4):hover {
+  background: #FF2F32; /* 赤 */
+}
+/* リンクが無い(#)場合の設定 */
+.work-links a[href="#"]:hover {
+  cursor: not-allowed; /* 禁止カーソル */
+  background: #000; /* 色を変えない */
+}
+.work-links a[href="#"]:active {
+  pointer-events: none; /* クリック無効化 */
+}
+
+/* リンク内アイコン */
+.work-links img {
+  width: 20px; /* サイズ */
+  height: 20px; /* サイズ */
+  object-fit: cover; /* 比率維持 */
+  margin-right: 8px; /* 文字との間隔 */
+}
+
+/* ====================
+  フッター
+==================== */
+
+footer {
+  background: #666; /* 背景グレー */
+  color: #fff; /* 白文字 */
+  text-align: center; /* 中央揃え */
+  padding: 20px 0; /* 上下余白 */
+}
+
+/* コピーライト表記 */
+.copyright {
+  font-size: 14px; /* 小さめ文字 */
+  margin: 0; /* 余白リセット */
+}
